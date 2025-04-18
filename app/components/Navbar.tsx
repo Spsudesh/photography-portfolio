@@ -69,15 +69,16 @@ export default function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
-              <Image
-                loader={imageLoader}
-                src="/images/logo.jpg"
-                alt="RP Photography Logo"
-                width={50}
-                height={50}
-                className="rounded-full"
-                priority
-              />
+              <div className="relative w-[50px] h-[50px]">
+                <Image
+                  src="/images/logo.jpg"
+                  alt="RP Photography Logo"
+                  fill
+                  className="rounded-full object-cover"
+                  priority
+                  sizes="50px"
+                />
+              </div>
               <span className="ml-3 text-xl font-semibold text-white">RP Photography</span>
             </Link>
           </div>
