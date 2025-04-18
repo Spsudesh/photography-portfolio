@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import imageLoader from '../../image-loader';
 
 export default function Navbar() {
   const router = useRouter();
@@ -69,11 +70,13 @@ export default function Navbar() {
           <div className="flex-shrink-0">
             <Link href="/" className="flex items-center">
               <Image
+                loader={imageLoader}
                 src="/images/logo.jpg"
                 alt="RP Photography Logo"
                 width={50}
                 height={50}
                 className="rounded-full"
+                priority
               />
               <span className="ml-3 text-xl font-semibold text-white">RP Photography</span>
             </Link>

@@ -1,8 +1,10 @@
 'use client';
 
+import { useEffect } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
+import imageLoader from '../image-loader';
 
 export default function Home() {
   return (
@@ -11,12 +13,13 @@ export default function Home() {
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/30" />
-        <Image
+          <Image
+            loader={imageLoader}
             src="/images/hero-bg.jpg"
             alt="Hero background"
             fill
             className="object-cover md:object-center object-[73%_center]"
-          priority
+            priority
             sizes="100vw"
             quality={90}
           />
@@ -73,6 +76,7 @@ export default function Home() {
             >
               <div className="aspect-[3/4] relative">
                 <Image
+                  loader={imageLoader}
                   src="/images/outdoor-photography.jpg"
                   alt="Outdoor Photography"
                   fill
@@ -106,6 +110,7 @@ export default function Home() {
             >
               <div className="aspect-[3/4] relative">
                 <Image
+                  loader={imageLoader}
                   src="/images/wedding-photography.jpg"
                   alt="Wedding Photography"
                   fill
@@ -138,7 +143,8 @@ export default function Home() {
               className="relative group overflow-hidden rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-white dark:bg-gray-800"
             >
               <div className="aspect-[3/4] relative">
-            <Image
+                <Image
+                  loader={imageLoader}
                   src="/images/indoor-photography.jpg"
                   alt="Indoor Photography"
                   fill
@@ -203,6 +209,7 @@ export default function Home() {
               className="relative group aspect-[4/3] overflow-hidden rounded-xl"
             >
               <Image
+                loader={imageLoader}
                 src="/images/gallery-1.jpg"
                 alt="Gallery preview 1"
                 fill
@@ -221,6 +228,7 @@ export default function Home() {
               className="relative group aspect-[4/3] overflow-hidden rounded-xl"
             >
               <Image
+                loader={imageLoader}
                 src="/images/gallery-2.jpg"
                 alt="Gallery preview 2"
                 fill
@@ -239,6 +247,7 @@ export default function Home() {
               className="relative group aspect-[4/3] overflow-hidden rounded-xl"
             >
               <Image
+                loader={imageLoader}
                 src="/images/gallery-3.jpg"
                 alt="Gallery preview 3"
                 fill
@@ -318,7 +327,8 @@ export default function Home() {
                 className="absolute left-0 bottom-0 w-full h-full rounded-lg overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/40 via-orange-400/20 to-transparent z-10"></div>
-          <Image
+                <Image
+                  loader={imageLoader}
                   src="/images/about-1.jpg"
                   alt="Photographer in action"
                   fill
@@ -334,8 +344,9 @@ export default function Home() {
                 transition={{ duration: 0.8, delay: 0.3 }}
                 viewport={{ once: true }}
                 className="absolute -right-32 top-[calc(50%-190px)] w-[220px] h-[280px] md:w-[300px] md:h-[380px] rounded-lg overflow-hidden z-20"
-        >
-          <Image
+              >
+                <Image
+                  loader={imageLoader}
                   src="/images/about-2.jpg"
                   alt="Photography equipment"
                   fill
@@ -359,6 +370,7 @@ export default function Home() {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/50 to-black/70 z-10" />
           <Image
+            loader={imageLoader}
             src="/images/contact-bg.jpg"
             alt="Contact background"
             fill
