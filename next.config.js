@@ -1,13 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   output: 'export',
-  images: {
-    loader: 'akamai',
-    path: '',
-  },
   basePath: '/photography-portfolio',
-  assetPrefix: '/photography-portfolio/',
-  trailingSlash: true,
+  images: {
+    unoptimized: true
+  }
 };
 
 module.exports = nextConfig; 

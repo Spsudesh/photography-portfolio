@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import imageLoader from '../../image-loader';
 
 export default function Navbar() {
   const router = useRouter();
