@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import imageLoader from '../../image-loader';
 
 export default function Gallery() {
   const images = [
@@ -15,7 +14,6 @@ export default function Gallery() {
       {images.map((image, index) => (
         <div key={index} className="relative aspect-square">
           <Image
-            loader={imageLoader}
             src={image.src}
             alt={image.alt}
             fill
